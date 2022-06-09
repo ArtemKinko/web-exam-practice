@@ -1,0 +1,30 @@
+<!-- 8. Написать html-код для таблицы размером 3 на 3, средний столбец содержит одну ячейку-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Объединение ячеек</title>
+    <style>
+        table, tr, td, th {
+            border: black solid 1px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Первый</td>
+            <td rowspan="3">Большой столбец</td>
+            <td>Второй</td>
+        </tr>
+        <tr>
+            <td>Третий</td>
+            <td>Четвертый</td>
+        </tr>
+        <tr>
+            <td>Пятый</td>
+            <td>Шестой</td>
+        </tr>
+    </table>
+</body>
+</html>

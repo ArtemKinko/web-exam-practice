@@ -1,0 +1,16 @@
+<!-- 10. Написать html-код для формы, которая передает на сервер одно значение, введенное пользователем-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма отправки на сервер</title>
+</head>
+<body>
+    <form action="cgi-bin/11-response-page.py" method="post">
+        <label> Введите любое число:
+            <input name="user-input" type="number">
+        </label>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- ОТВЕТ НА ВОПРОС СМОТРИ В ДИРРЕКТОРИИ CGI-BIN (версия на Python)-->
+<!-- 5. Написать серверный сценарий, который отправляет почту -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отправка сообщения на введенную почту</title>
+</head>
+<body>
+    <form action="cgi-bin/5-mail-sender.py" method="post">
+        <label> Введите почту, с которой отправить письмо
+            <input type="email" name="emailFrom">
+        </label>
+        <br>
+        <label> Введите токен:
+            <input type="text" name="tokenFrom">
+        </label>
+        <br>
+        <label> Введите почту, на которую отправить письмо:
+            <input type="email" name="emailTo">
+        </label>
+        <br>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>

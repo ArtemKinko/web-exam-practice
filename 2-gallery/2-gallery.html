@@ -1,0 +1,37 @@
+<!-- 2. Написать клиентский сценарий: создание галереи изображений -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание галереи изображений</title>
+    <script>
+        let images = ["img.png", "img2.png", "img3.png"];
+        let current_image_index = 0;
+        function changeImage(mode) {
+            // сначала получаем новый индекс изображения
+            // 0 - предыдущее изображение
+            if (mode === 0) {
+                if (current_image_index === 0)
+                    current_image_index = images.length - 1;
+                else
+                    current_image_index -= 1;
+            }
+            // 1 - следующее изображение
+            else {
+                current_image_index = (current_image_index + 1) % images.length;
+            }
+            // меняем изображение
+            document.getElementById("gallery-image").src = "2-images/" + images[current_image_index];
+        }
+        window.onload = () => {
+            document.getElementById("gallery-image").src = "2-images/" + images[current_image_index];
+        }
+    </script>
+</head>
+<body>
+    <img style="height: 400px" id="gallery-image">
+    <br>
+    <button id="prev-button" onclick="changeImage(0)">Назад</button>
+    <button id="next-button" onclick="changeImage(1)">Вперед</button>
+</body>
+</html>

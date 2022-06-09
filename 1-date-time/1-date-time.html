@@ -1,0 +1,17 @@
+<!-- 1. Написать клиентский сценарий: вывод на экран даты и времени -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вывод на экран даты и времени</title>
+    <script>
+        window.onload = () => {
+            document.getElementById("date-time").textContent = new Date().toLocaleString();
+        }
+    </script>
+</head>
+<body>
+    <p><b>Текущие дата и время:</b></p>
+    <p id="date-time"></p>
+</body>
+</html>

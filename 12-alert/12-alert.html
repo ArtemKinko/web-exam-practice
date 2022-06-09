@@ -1,0 +1,23 @@
+<!-- 10. Написать html-код страницы и клиентский сценарий на JS для выполнения следующей задачи:-->
+<!-- Взять значение, введенное пользователем и отобразить его в окне alert-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вывод в alert'е</title>
+    <script>
+        function alertUserInput() {
+            alert(document.getElementById("user-input").value);
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="alertUserInput()">
+        <label> Введите любое число:
+            <input type="number" id="user-input">
+        </label>
+        <input type="submit" value="Подтвердить">
+    </form>
+</body>
+</html>
